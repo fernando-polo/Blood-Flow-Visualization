@@ -205,8 +205,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.20701106, y: 0.41107655, z: -0.09642087, w: -0.8825336}
-  m_LocalPosition: {x: 31.268805, y: 18.404911, z: -56.267647}
+  m_LocalRotation: {x: -0.22095746, y: 0.45429838, z: -0.11740345, w: -0.8549896}
+  m_LocalPosition: {x: 25.059212, y: 15.240684, z: -51.196053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -442,56 +442,64 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.36446
+      value: 9.185713
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.65
+      value: 7.762945
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.41
+      value: -30.361683
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.36075494
+      value: 0.4458754
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6081578
+      value: -0.5558957
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6081578
+      value: 0.5784065
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.36075494
+      value: 0.39701527
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -118.647995
+      value: -107.255
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -14.524994
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 102.998
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
+      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
     - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
+      objectReference: {fileID: 2100000, guid: aeec9b74ea7c949b8b35e0d8247098bf, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
       objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
     - target: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_Name
       value: Aorta_iliac-arteries
