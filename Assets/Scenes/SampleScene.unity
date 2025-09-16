@@ -499,7 +499,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
-      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
+      objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
     - target: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_Name
       value: Aorta_iliac-arteries
