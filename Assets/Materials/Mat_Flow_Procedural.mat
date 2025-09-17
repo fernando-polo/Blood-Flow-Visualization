@@ -94,6 +94,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _Diameter: 23
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
@@ -105,9 +106,13 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _PatternScale: 3
+    - _PressureIn: 100
+    - _PressureOut: 98
+    - _PressureOverlayAlpha: 0.35
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _ScaleFactor: 10
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

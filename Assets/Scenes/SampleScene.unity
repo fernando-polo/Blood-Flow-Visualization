@@ -205,8 +205,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.22095746, y: 0.45429838, z: -0.11740345, w: -0.8549896}
-  m_LocalPosition: {x: 25.059212, y: 15.240684, z: -51.196053}
+  m_LocalRotation: {x: 0.68444717, y: -0.00765422, z: 0.0071884096, w: 0.7289869}
+  m_LocalPosition: {x: 37.612408, y: 55.943268, z: -33.15491}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -383,6 +383,30 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &729883036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+  m_PrefabInstance: {fileID: 1958862074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &729883040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729883036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c9ac6dab4564b349c684e9e6c479ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodFlowController
+  pressureIn: 100
+  pressureOut: 98
+  length: 0.25
+  diameter: 0.023
+  viscosity: 0.0035
+  flowMaterial: {fileID: 2100000, guid: e78f1ad2fae8349d290416d812aeee45, type: 2}
+  flowSpeedProperty: _FlowSpeed
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +456,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &878601042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+  m_PrefabInstance: {fileID: 1623237091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &878601047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878601042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c9ac6dab4564b349c684e9e6c479ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodFlowController
+  pressureIn: 100
+  pressureOut: 90
+  length: 0.15
+  diameter: 0.008
+  viscosity: 0.0035
+  flowMaterial: {fileID: 2100000, guid: e78f1ad2fae8349d290416d812aeee45, type: 2}
+  flowSpeedProperty: _FlowSpeed
 --- !u!1001 &1288728366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -442,15 +490,92 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.185713
+      value: -36.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.762945
+      value: 11.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.361683
+      value: -29.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4458754
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5558957
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5784065
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39701527
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -107.255
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -14.524994
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 102.998
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d6f8595c9e8e1470687803ab69d639cd, type: 2}
+    - target: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_Name
+      value: Aorta_iliac-arteries (Original)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+--- !u!1001 &1337292249
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 48.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -28.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_LocalRotation.w
@@ -487,11 +612,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
+      objectReference: {fileID: 2100000, guid: e78f1ad2fae8349d290416d812aeee45, type: 2}
     - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: aeec9b74ea7c949b8b35e0d8247098bf, type: 2}
+      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
     - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
@@ -499,15 +624,306 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
+      objectReference: {fileID: 2100000, guid: d6f8595c9e8e1470687803ab69d639cd, type: 2}
     - target: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
       propertyPath: m_Name
-      value: Aorta_iliac-arteries
+      value: Aorta_iliac-arteries (Estenosis Severa)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1352781607}
+  m_SourcePrefab: {fileID: 100100000, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+--- !u!1 &1352781602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+  m_PrefabInstance: {fileID: 1337292249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1352781607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352781602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c9ac6dab4564b349c684e9e6c479ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodFlowController
+  pressureIn: 100
+  pressureOut: 60
+  length: 0.1
+  diameter: 0.004
+  viscosity: 0.0035
+  flowMaterial: {fileID: 2100000, guid: e78f1ad2fae8349d290416d812aeee45, type: 2}
+  flowSpeedProperty: _FlowSpeed
+--- !u!1001 &1501199917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 73.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -28.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4458754
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5558957
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5784065
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39701527
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -107.255
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -14.524994
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 102.998
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e78f1ad2fae8349d290416d812aeee45, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d6f8595c9e8e1470687803ab69d639cd, type: 2}
+    - target: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_Name
+      value: "Aorta_iliac-arteries (Policitemia - Sangre m\xE1s viscosa)"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1520453970}
+  m_SourcePrefab: {fileID: 100100000, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+--- !u!1 &1520453965 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+  m_PrefabInstance: {fileID: 1501199917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1520453970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520453965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c9ac6dab4564b349c684e9e6c479ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodFlowController
+  pressureIn: 100
+  pressureOut: 95
+  length: 0.2
+  diameter: 0.01
+  viscosity: 0.006
+  flowMaterial: {fileID: 2100000, guid: e78f1ad2fae8349d290416d812aeee45, type: 2}
+  flowSpeedProperty: _FlowSpeed
+--- !u!1001 &1623237091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.18
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.21
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4458754
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5558957
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5784065
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39701527
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -107.255
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -14.524994
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 102.998
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e78f1ad2fae8349d290416d812aeee45, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d6f8595c9e8e1470687803ab69d639cd, type: 2}
+    - target: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_Name
+      value: Aorta_iliac-arteries (Estenosis leve)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 878601047}
+  m_SourcePrefab: {fileID: 100100000, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+--- !u!1001 &1958862074
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4458754
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5558957
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5784065
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39701527
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -107.255
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -14.524994
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 102.998
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e78f1ad2fae8349d290416d812aeee45, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d6f8595c9e8e1470687803ab69d639cd, type: 2}
+    - target: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_Name
+      value: Aorta_iliac-arteries (Aorta Normal)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 729883040}
   m_SourcePrefab: {fileID: 100100000, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -517,3 +933,7 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1288728366}
+  - {fileID: 1958862074}
+  - {fileID: 1623237091}
+  - {fileID: 1337292249}
+  - {fileID: 1501199917}
