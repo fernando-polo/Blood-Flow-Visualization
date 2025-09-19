@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/1erPrototipo-TodasLasAortas.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: 8f325ac0414f9480ba59683809038dae
+  - enabled: 1
+    path: Assets/Scenes/Aorta_Sana.unity
+    guid: 6d389a0c98d5544f9a35093ceadb7f5b
+  - enabled: 1
+    path: Assets/Scenes/Aorta_EstenosisSevera.unity
+    guid: ccb9a1662320e4d8e9251c46e8772c39
+  - enabled: 1
+    path: Assets/Scenes/Aorta_EstenosisLeve.unity
+    guid: 1634328b2d4be48738cfc9957347879a
+  - enabled: 1
+    path: Assets/Scenes/Aorta_Policitemia.unity
+    guid: d41490d20dd5f4cb8b54e6fdfa6192e2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

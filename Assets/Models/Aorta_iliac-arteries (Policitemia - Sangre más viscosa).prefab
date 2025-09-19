@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8132371172938154951
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 73.96412
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.0461903
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -28.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.41841662
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.59321815
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.54006165
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.42585585
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -106.981
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 10.516998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 76.834
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e78f1ad2fae8349d290416d812aeee45, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d6f8595c9e8e1470687803ab69d639cd, type: 2}
+    - target: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      propertyPath: m_Name
+      value: "Aorta_iliac-arteries (Policitemia - Sangre ma\u0301s viscosa)"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1455255129172927436}
+  m_SourcePrefab: {fileID: 100100000, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+--- !u!1 &8942624590100053654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 30886fdc9cd734bebb8bc82b0fc6e379, type: 3}
+  m_PrefabInstance: {fileID: 8132371172938154951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1455255129172927436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8942624590100053654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c9ac6dab4564b349c684e9e6c479ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodFlowController
+  pressureIn: 100
+  pressureOut: 60
+  length: 0.2
+  diameter: 0.01
+  viscosity: 0.006
+  bloodFlowMaterialIndex: 1
+  overrideFlowMaterial: {fileID: 0}
+  flowSpeedProperty: _FlowSpeed
+  pressureInProperty: _PressureIn
+  pressureOutProperty: _PressureOut
+  lengthProperty: _Length
+  xMinProperty: _XMin
+  xMaxProperty: _XMax
+  epsilonProperty: _Epsilon
+  updateBoundsEveryFrame: 0
+  epsilon: 0.00001
