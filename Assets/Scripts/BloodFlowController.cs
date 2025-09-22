@@ -7,11 +7,11 @@ public class BloodFlowController : MonoBehaviour
     [Tooltip("Presión de entrada (mmHg)")]
     public float pressureIn = 100f;   // mmHg
     [Tooltip("Presión de salida (mmHg)")]
-    public float pressureOut = 98f;   // mmHg
+    public float pressureOut = 95f;   // mmHg
     [Tooltip("Longitud del vaso en metros")]
     public float length = 0.25f;      // m
     [Tooltip("Diámetro interno (m)")]
-    public float diameter = 0.023f;   // m
+    public float diameter = 0.012f;   // m
     [Tooltip("Viscosidad dinámica (Pa·s)")]
     public float viscosity = 0.0035f; // Pa·s
 
@@ -130,6 +130,8 @@ public class BloodFlowController : MonoBehaviour
         //Debug.Log($"{name} → Velocity: {velocity:F6} m/s | ΔP: {pressureIn - pressureOut} mmHg");
     }
 
+    public float CurrentFlow { get; private set; }  // flujo en m³/s
+
     float CalculateAverageVelocity()
     {
         // ΔP en Pascales
@@ -147,6 +149,10 @@ public class BloodFlowController : MonoBehaviour
         float flow = 0f;
         if (Mathf.Abs(resistance) > Mathf.Epsilon)
             flow = deltaP / resistance;
+
+
+        CurrentFlow = flow; // <-- Guardamos el Q
+
 
         // área
         float area = Mathf.PI * Mathf.Pow(radius, 2);
