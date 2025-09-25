@@ -181,15 +181,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.78
+      value: -12.6
       objectReference: {fileID: 0}
     - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.78
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 29.04
+      value: 33.3
       objectReference: {fileID: 0}
     - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -222,6 +222,79 @@ PrefabInstance:
     - target: {fileID: 8022777466905381448, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
       propertyPath: m_Name
       value: Aorta_iliac-arteries (Estenosis severa) Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+--- !u!1001 &281746371
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2319252059412013038, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: length
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319252059412013038, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: diameter
+      value: 0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319252059412013038, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: viscosity
+      value: 0.0035
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319252059412013038, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: pressureOut
+      value: 98.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 33.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4458754
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5558957
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5784065
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39701527
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -107.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -14.524994
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 102.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022777466905381448, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_Name
+      value: Aorta_iliac-arteries (Estenosis severa) Variant (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1195,13 +1268,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590530193}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27054825, y: -0.31884632, z: 0.095500775, w: 0.9033384}
-  m_LocalPosition: {x: -1.268259, y: 8.923592, z: 6.9018307}
+  m_LocalRotation: {x: 0.39715287, y: 0.024969706, z: -0.009076392, w: 0.9173679}
+  m_LocalPosition: {x: -14.3, y: 13.79, z: 2.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 17.704, y: -41.502, z: -0.001}
+  m_LocalEulerAnglesHint: {x: 46.813, y: 3.234, z: 0.266}
 --- !u!1 &1623882805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1402,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 64.19, y: -47.577, z: -20.712}
+--- !u!1001 &1705434828
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2319252059412013038, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: length
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319252059412013038, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: diameter
+      value: 0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319252059412013038, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: viscosity
+      value: 0.0035
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319252059412013038, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: pressureOut
+      value: 98.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -29.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 33.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4458754
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5558957
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5784065
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39701527
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -107.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -14.524994
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214046650972967154, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 102.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022777466905381448, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
+      propertyPath: m_Name
+      value: Aorta_iliac-arteries (Estenosis severa) Variant (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
 --- !u!114 &1733847735 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2319252059412013038, guid: d3e86413ea9f3469f9149a4fd40b142a, type: 3}
@@ -1574,6 +1720,8 @@ SceneRoots:
   - {fileID: 1590530197}
   - {fileID: 1623882808}
   - {fileID: 275685329}
+  - {fileID: 281746371}
+  - {fileID: 1705434828}
   - {fileID: 1262085630}
   - {fileID: 1546596986}
   - {fileID: 324870275}

@@ -29,6 +29,7 @@ public class BloodFlowController : MonoBehaviour
     public string xMinProperty = "_XMin";
     public string xMaxProperty = "_XMax";
     public string epsilonProperty = "_Epsilon";
+    public string pressureGradientProperty = "_PressureGradient";
 
     [Header("Opciones")]
     [Tooltip("Si true, recalcula bounds (_XMin/_XMax) cada frame (útil si el objeto se mueve/escala).")]
@@ -122,7 +123,14 @@ public class BloodFlowController : MonoBehaviour
         _localMaterial.SetFloat(lengthProperty, length);
         _localMaterial.SetFloat(epsilonProperty, epsilon);
 
-        // 3) Actualizar bounds si requerido (Xmin/Xmax en local space)
+        // 3) Enviar gradiente de presión al shader 👇
+        float gradient = (pressureIn - pressureOut) / Mathf.Max(length, 1e-6f);
+        if (_localMaterial.HasProperty(pressureGradientProperty))
+            _localMaterial.SetFloat(pressureGradientProperty, gradient);
+
+        Debug.Log($"{name} → ΔP={pressureIn - pressureOut} mmHg | Grad={gradient:F2} mmHg/m");     
+
+        // 4) Actualizar bounds si requerido (Xmin/Xmax en local space)
         if (updateBoundsEveryFrame)
             UpdateBoundsToMaterial();
 
