@@ -31,13 +31,59 @@ public class PressureShaderDebugger : MonoBehaviour
     float _nextLogTime = 0f;
 
     [Header("Test Mode (ignora cálculos)")]
-    [Range(0f, 1f)] public float testT = -1f; 
+    [Range(0f, 1f)] public float testT = -1f;
 
+    void OnEnable()
+    {
+        // Reconectar material cada vez que el objeto se activa
+        if (debugLogs) Debug.Log($"[{name}] OnEnable llamado");
+        InitializeMaterial();
+        RefreshShader();
+    }
+    void RefreshShader()
+    {
+        if (_matInstance == null) return;
+
+        if (_matInstance.HasProperty(inMinProperty)) _matInstance.SetFloat(inMinProperty, gradientMin);
+        if (_matInstance.HasProperty(inMaxProperty)) _matInstance.SetFloat(inMaxProperty, gradientMax);
+
+        // Aplica un valor inicial de gradiente (para no depender de Update)
+        float grad = 0f;
+        if (sourceFlow != null)
+        {
+            float deltaP_Pa = (sourceFlow.pressureIn - sourceFlow.pressureOut) * 133.322f;
+            grad = deltaP_Pa / Mathf.Max(1e-6f, sourceFlow.length);
+        }
+
+        if (_matInstance.HasProperty(pressureProperty))
+        {
+            _matInstance.SetFloat(pressureProperty, grad);
+            if (debugLogs) Debug.Log($"[{name}] [RefreshShader] Reaplicado {pressureProperty}={grad}");
+        }
+
+        if (_matInstance.HasProperty(normalizedProperty))
+        {
+            float t = Mathf.InverseLerp(gradientMin, gradientMax, grad);
+            if (testT >= 0f) t = testT;
+            _matInstance.SetFloat(normalizedProperty, t);
+        }
+    }
     void Awake()
     {
+        if (debugLogs) Debug.Log($"[{name}] Awake llamado");
+
+        // Intentar asignar sourceFlow automáticamente
+        if (sourceFlow == null)
+        {
+            sourceFlow = FindObjectOfType<BloodFlowController>();
+            if (sourceFlow != null && debugLogs)
+                Debug.Log($"[{name}] SourceFlow asignado automáticamente a {sourceFlow.name}");
+            else if (sourceFlow == null)
+                Debug.LogWarning($"[{name}] No se encontró ningún BloodFlowController en la escena.");
+        }
+
         if (targetRenderer == null)
         {
-            // intentar encontrar renderer en este GameObject
             targetRenderer = GetComponentInChildren<Renderer>();
             if (targetRenderer == null)
             {
@@ -46,11 +92,22 @@ public class PressureShaderDebugger : MonoBehaviour
             }
         }
 
+        InitializeMaterial();
+    }
+
+    void InitializeMaterial()
+    {
+        if (targetRenderer == null)
+        {
+            Debug.LogWarning($"[{name}] targetRenderer es null en InitializeMaterial()");
+            return;
+        }
+
         // Obtener materiales compartidos
         Material[] shared = targetRenderer.sharedMaterials;
         if (shared == null || shared.Length == 0)
         {
-            Debug.LogError($"[{name}] targetRenderer no tiene materiales asignados.");
+            Debug.LogWarning($"[{name}] targetRenderer.sharedMaterials es null o vacío");
             return;
         }
 
@@ -58,13 +115,11 @@ public class PressureShaderDebugger : MonoBehaviour
         int idx = materialSlotIndex;
         if (idx < 0 || idx >= shared.Length)
         {
-            // intentar detectar primer material que tenga la propiedad
             idx = -1;
             for (int i = 0; i < shared.Length; i++)
             {
                 if (shared[i] != null)
                 {
-                    // NO usamos HasProperty en assets null-safe
                     try
                     {
                         if (shared[i].HasProperty(pressureProperty))
@@ -73,36 +128,32 @@ public class PressureShaderDebugger : MonoBehaviour
                             break;
                         }
                     }
-                    catch { /* ignorar */ }
+                    catch { }
                 }
             }
-
-            if (idx == -1)
-            {
-                // si aún no encontramos, fallback al slot 1 si existe
-                idx = Mathf.Clamp(materialSlotIndex, 0, shared.Length - 1);
-                Debug.LogWarning($"[{name}] Índice solicitado fuera de rango. Se usará índice {idx} por fallback. Considera poner Override Material para garantizar el shader correcto.");
-            }
+            if (idx == -1) idx = Mathf.Clamp(materialSlotIndex, 0, shared.Length - 1);
+            if (debugLogs) Debug.Log($"[{name}] Material slot detectado: {idx}");
         }
-
         _usedIndex = idx;
 
-        // Instanciar material para no tocar asset original
+        // Instanciar material
         Material baseMat = overrideMaterial != null ? overrideMaterial : shared[_usedIndex];
         if (baseMat == null)
         {
-            Debug.LogError($"[{name}] Material base es null en índice {_usedIndex}");
+            Debug.LogWarning($"[{name}] baseMat es null");
             return;
         }
+
         _matInstance = new Material(baseMat);
 
-        // Reemplazar solo el slot objetivo en la lista de materiales
-        Material[] mats = targetRenderer.materials; // esto devuelve instancias
+        // Reemplazar solo el slot objetivo
+        Material[] mats = targetRenderer.materials;
         if (_usedIndex < 0 || _usedIndex >= mats.Length)
         {
-            Debug.LogError($"[{name}] Índice {_usedIndex} fuera de rango para materials array (length {mats.Length}).");
+            Debug.LogWarning($"[{name}] _usedIndex fuera de rango en materials array");
             return;
         }
+
         mats[_usedIndex] = _matInstance;
         targetRenderer.materials = mats;
 
@@ -111,17 +162,49 @@ public class PressureShaderDebugger : MonoBehaviour
         if (_matInstance.HasProperty(inMaxProperty)) _matInstance.SetFloat(inMaxProperty, gradientMax);
 
         if (debugLogs)
-            Debug.Log($"[{name}] Inicializado. Usando material slot {_usedIndex} ({_matInstance.name}). Overrides: {(overrideMaterial!=null ? "sí":"no")}");
+            Debug.Log($"[{name}] Material inicializado correctamente en slot {_usedIndex}: {_matInstance.name}");
+    }
+    void SyncMaterialInstance()
+    {
+        if (targetRenderer == null || _usedIndex < 0) return;
+
+        var mats = targetRenderer.materials;
+        if (_usedIndex >= mats.Length) return;
+
+        if (_matInstance == null || mats[_usedIndex].GetInstanceID() != _matInstance.GetInstanceID())
+        {
+            if (debugLogs)
+                Debug.Log($"[{name}] 🔄 Reenganchando material en slot {_usedIndex} (old={_matInstance?.GetInstanceID()} new={mats[_usedIndex].GetInstanceID()})");
+
+            _matInstance = mats[_usedIndex];
+        }
     }
 
     void Update()
     {
+
+        if (debugLogs && Time.frameCount % 60 == 0) // cada ~1 seg
+        {
+            var currentMats = targetRenderer.materials;
+            if (_usedIndex >= 0 && _usedIndex < currentMats.Length)
+                Debug.Log($"[{name}] Frame {Time.frameCount} -> Material en renderer[{_usedIndex}] = {currentMats[_usedIndex].GetInstanceID()} | _matInstance = {_matInstance.GetInstanceID()}");
+        }
+
         if (sourceFlow == null)
         {
-            if (debugLogs) Debug.LogWarning($"[{name}] sourceFlow es null. Arrastra el objeto que contiene BloodFlowController al campo Source Flow.");
+            Debug.LogWarning($"[{name}] sourceFlow es null en Update()");
             return;
         }
-        if (_matInstance == null) return;
+        if (_matInstance == null)
+        {
+            Debug.LogWarning($"[{name}] _matInstance es null en Update()");
+            return;
+        }
+        if (targetRenderer == null)
+        {
+            Debug.LogWarning($"[{name}] targetRenderer es null en Update()");
+            return;
+        }
 
         // Calculos
         float deltaP_mmHg = sourceFlow.pressureIn - sourceFlow.pressureOut;
@@ -129,14 +212,26 @@ public class PressureShaderDebugger : MonoBehaviour
         float length = Mathf.Max(1e-6f, sourceFlow.length);
         float grad = deltaP_Pa / length; // Pa/m
 
-        // Normalizado [0,1]
-        float t = Mathf.InverseLerp(gradientMin, gradientMax, grad);
+        if (debugLogs)
+        {
+            Debug.Log($"[{name}] Calculado gradiente: ΔP={deltaP_mmHg:F3} mmHg → {deltaP_Pa:F1} Pa | length={sourceFlow.length} m | grad={grad:F1} Pa/m");
+        }
 
+        float t = Mathf.InverseLerp(gradientMin, gradientMax, grad);
         if (testT >= 0f) t = testT;
 
-        // Actualizar propiedades en material SOLO si existen
+        // Enviar valores al shader y verificar
         if (_matInstance.HasProperty(pressureProperty))
+        {
             _matInstance.SetFloat(pressureProperty, grad);
+            float check = _matInstance.GetFloat(pressureProperty);
+            if (debugLogs) Debug.Log($"[{name}] _PressureGradient enviado: {grad} → verificado: {check}");
+        }
+        else
+        {
+            if (debugLogs) Debug.LogWarning($"[{name}] Material NO tiene la propiedad {pressureProperty}");
+        }
+
         if (_matInstance.HasProperty(normalizedProperty))
             _matInstance.SetFloat(normalizedProperty, t);
         if (_matInstance.HasProperty(inMinProperty))
@@ -144,12 +239,15 @@ public class PressureShaderDebugger : MonoBehaviour
         if (_matInstance.HasProperty(inMaxProperty))
             _matInstance.SetFloat(inMaxProperty, gradientMax);
 
-        // Logging controlado
+        // Log controlado para evitar spam
         if (debugLogs && Time.time >= _nextLogTime)
         {
             _nextLogTime = Time.time + Mathf.Max(0.001f, logInterval);
             string props = $"HasPressureProp={_matInstance.HasProperty(pressureProperty)} HasNormProp={_matInstance.HasProperty(normalizedProperty)}";
-            Debug.Log($"[{name}] ΔP={deltaP_mmHg:F3} mmHg → {deltaP_Pa:F1} Pa | Grad={grad:F1} Pa/m | t={t:F3} | slot={_usedIndex} | {props}");
+            Debug.Log($"[{name}] ΔP={deltaP_mmHg:F3} mmHg → Grad={grad:F1} Pa/m | t={t:F3} | slot={_usedIndex} | {props}");
         }
+
+            SyncMaterialInstance();
     }
+
 }

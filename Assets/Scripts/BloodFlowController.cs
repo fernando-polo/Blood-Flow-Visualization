@@ -128,7 +128,9 @@ public class BloodFlowController : MonoBehaviour
         if (_localMaterial.HasProperty(pressureGradientProperty))
             _localMaterial.SetFloat(pressureGradientProperty, gradient);
 
-        Debug.Log($"{name} → ΔP={pressureIn - pressureOut} mmHg | Grad={gradient:F2} mmHg/m");     
+        Debug.Log($"{name} → ΔP={pressureIn - pressureOut} mmHg | Grad={gradient:F2} mmHg/m");
+
+     
 
         // 4) Actualizar bounds si requerido (Xmin/Xmax en local space)
         if (updateBoundsEveryFrame)
