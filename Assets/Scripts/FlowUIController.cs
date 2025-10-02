@@ -28,7 +28,7 @@ public class FlowUIController : MonoBehaviour
     {
         if (bloodFlow == null)
         {
-            bloodFlow = FindObjectOfType<BloodFlowController>();
+            bloodFlow = Object.FindFirstObjectByType<BloodFlowController>();
             if (bloodFlow == null)
                 Debug.LogWarning("FlowUIController: no se encontró BloodFlowController en la escena.");
         }

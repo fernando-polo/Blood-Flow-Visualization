@@ -130,19 +130,25 @@ public class BloodFlowController : MonoBehaviour
 
         Debug.Log($"{name} → ΔP={pressureIn - pressureOut} mmHg | Grad={gradient:F2} mmHg/m");
 
-     
-
         // 4) Actualizar bounds si requerido (Xmin/Xmax en local space)
         if (updateBoundsEveryFrame)
             UpdateBoundsToMaterial();
 
-        // Debug — comentar si produce spam en consola
-        //Debug.Log($"{name} → Velocity: {velocity:F6} m/s | ΔP: {pressureIn - pressureOut} mmHg");
     }
 
     public float CurrentFlow { get; private set; }  // flujo en m³/s
 
-    float CalculateAverageVelocity()
+
+    /// <summary>
+    /// Flujo en litros por minuto (L/min)
+    /// </summary>
+    public float flowLpm
+    {
+        get { return CurrentFlow * 1000f * 60f; } // m³/s → L/min
+    }
+
+
+    public float CalculateAverageVelocity()
     {
         // ΔP en Pascales
         float deltaP_mmHg = pressureIn - pressureOut;

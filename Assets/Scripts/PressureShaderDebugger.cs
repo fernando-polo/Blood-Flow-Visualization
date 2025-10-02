@@ -75,7 +75,7 @@ public class PressureShaderDebugger : MonoBehaviour
         // Intentar asignar sourceFlow automáticamente
         if (sourceFlow == null)
         {
-            sourceFlow = FindObjectOfType<BloodFlowController>();
+            sourceFlow = Object.FindFirstObjectByType<BloodFlowController>();
             if (sourceFlow != null && debugLogs)
                 Debug.Log($"[{name}] SourceFlow asignado automáticamente a {sourceFlow.name}");
             else if (sourceFlow == null)
