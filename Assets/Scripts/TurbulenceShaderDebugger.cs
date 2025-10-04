@@ -47,25 +47,30 @@ public class TurbulenceShaderDebugger : MonoBehaviour
 
     void Update()
     {
-        if (_matInstance == null || flowController == null) return;
+  
+        // 1️⃣ Calcular ΔP y gradiente
+        float deltaP_mmHg = flowController.pressureIn - flowController.pressureOut;
+        float deltaP_Pa = deltaP_mmHg * 133.322f;
+        float grad = deltaP_Pa / Mathf.Max(0.0001f, flowController.length);
 
-        // 1️⃣ Actualizar Reynolds dinámicamente
+        // 2️⃣ Calcular Reynolds
         float reynolds = CalculateReynolds(flowController);
+
+        // 3️⃣ Enviar parámetros al shader
         if (_matInstance.HasProperty("_Reynolds"))
             _matInstance.SetFloat("_Reynolds", reynolds);
-
-        // 2️⃣ Enviar otros parámetros opcionales si deseas
         if (_matInstance.HasProperty("_TurbulenceIntensity"))
             _matInstance.SetFloat("_TurbulenceIntensity", 1f); // o configurable
-
         if (_matInstance.HasProperty("_NoiseScale"))
             _matInstance.SetFloat("_NoiseScale", 2f);
-
         if (_matInstance.HasProperty("_NoiseSpeed"))
             _matInstance.SetFloat("_NoiseSpeed", 1f);
-
         if (_matInstance.HasProperty("_Alpha"))
             _matInstance.SetFloat("_Alpha", 1f);
+
+    // 4️⃣ Mostrar en terminal
+    Debug.Log($"[TurbulenceShaderDebugger] ΔP={deltaP_mmHg:F1} mmHg | Grad={grad:F1} Pa/m | Re={reynolds:F1}");
+
 
         SyncMaterialInstance();
     }
@@ -79,8 +84,24 @@ public class TurbulenceShaderDebugger : MonoBehaviour
         float D = flow.diameter;
         float mu = flow.viscosity;
 
-        float Re = (rho * v * D) / mu;
-        return Re;
+        // float Re = (rho * v * D) / mu;
+        // return Re;
+
+        float ReReal = (rho * v * D) / mu;
+
+        // Limitar Reynolds para visualización (max 4000)
+        float ReVisual = Mathf.Min(ReReal, 4000f);
+
+
+        // Debug log
+        if(debugLogs)
+        {
+            float deltaP = (flow.pressureIn - flow.pressureOut);
+            float grad = deltaP * 133.322f / Mathf.Max(0.0001f, flow.length);
+            Debug.Log($"[TurbulenceShaderDebugger] ΔP={deltaP:F1} mmHg | Grad={grad:F1} Pa/m | Re={ReVisual:F1}");
+        }
+
+        return ReVisual;
     }
 
     // 🔄 Reenganchamos material si cambia instancia (igual que en PressureShaderDebugger)

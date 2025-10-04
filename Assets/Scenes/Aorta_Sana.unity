@@ -119,17 +119,116 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &10667338 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6108432660578183069, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-  m_PrefabInstance: {fileID: 633886637}
+--- !u!1001 &116705123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 336942826231148674, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_Name
+      value: Aorta _ Turbulence (Sana)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -35.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 28.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4458754
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5558957
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5784065
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39701527
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -107.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -14.524994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 102.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282748622937264471, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282748622937264471, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 17b77a4352e5348c8b0b1abe254b1f3f, type: 2}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: length
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: diameter
+      value: 0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: pressureIn
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: pressureOut
+      value: 99.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 336942826231148674, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 116705126}
+  m_SourcePrefab: {fileID: 100100000, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+--- !u!1 &116705124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 336942826231148674, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+  m_PrefabInstance: {fileID: 116705123}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!23 &116705125 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2282748622937264471, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+  m_PrefabInstance: {fileID: 116705123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &116705126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116705124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29c9ac6dab4564b349c684e9e6c479ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 7622143bfa58f4843ba2694a0ee5cc70, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BloodFlowController
+  m_EditorClassIdentifier: Assembly-CSharp::TurbulenceShaderDebugger
+  flowController: {fileID: 1545357208}
+  targetRenderer: {fileID: 116705125}
+  materialIndex: 1
+  debugLogs: 1
 --- !u!1 &125113639
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 892, y: -286}
+  m_AnchoredPosition: {x: 892, y: 155}
   m_SizeDelta: {x: 20, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &361167262
@@ -511,75 +610,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &633886637
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1222535317109057665, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -15.42749
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222535317109057665, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222535317109057665, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 29.6651
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222535317109057665, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.4458754
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222535317109057665, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5558957
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222535317109057665, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.5784065
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222535317109057665, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.39701527
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222535317109057665, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -107.255
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222535317109057665, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -14.524994
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222535317109057665, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 102.998
-      objectReference: {fileID: 0}
-    - target: {fileID: 1998615032234504763, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: m_Name
-      value: Aorta_iliac-arteries (Normal) Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 6108432660578183069, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: diameter
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 6108432660578183069, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: pressureIn
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6108432660578183069, guid: c744ff282790c494c8e2feb58390a539, type: 3}
-      propertyPath: pressureOut
-      value: 99.86
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c744ff282790c494c8e2feb58390a539, type: 3}
 --- !u!1 &648524422
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 747, y: -279}
+  m_AnchoredPosition: {x: 747, y: 292}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &719151431
@@ -1052,8 +1082,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996857134}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27054825, y: -0.31884632, z: 0.095500775, w: 0.9033384}
-  m_LocalPosition: {x: -1.268259, y: 8.923592, z: 6.9018307}
+  m_LocalRotation: {x: -0.18787007, y: 0.0073993807, z: -0.0014574715, w: -0.9821649}
+  m_LocalPosition: {x: -16.017056, y: 11.81064, z: -3.7056503}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1377,6 +1407,90 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 0, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1545357207
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 336942826231148674, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_Name
+      value: Aorta _ Blood Flow (Sana)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 28.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4458754
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5558957
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5784065
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39701527
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -107.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -14.524994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 102.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: length
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: diameter
+      value: 0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: pressureIn
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: pressureOut
+      value: 99.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+--- !u!114 &1545357208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+  m_PrefabInstance: {fileID: 1545357207}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c9ac6dab4564b349c684e9e6c479ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodFlowController
 --- !u!1 &1584104150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,7 +1520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b68e551b40e242ed9ecc8c9dcc0385f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowUIController
-  bloodFlow: {fileID: 10667338}
+  bloodFlow: {fileID: 0}
   fillImage: {fileID: 0}
   flowSlider: {fileID: 361167262}
   valueText: {fileID: 648524423}
@@ -1563,13 +1677,165 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673930684}
   m_CullTransparentMesh: 1
+--- !u!1001 &1899826462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 336942826231148674, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_Name
+      value: Aorta _ Pressure (Sana)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 28.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4458754
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5558957
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5784065
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39701527
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -107.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -14.524994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 102.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282748622937264471, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282748622937264471, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 53aaaa5bcecf34562b88bfe640708c8a, type: 2}
+    - target: {fileID: 2282748622937264471, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 29c811f0943204f4aae1e2a9a0c3658b, type: 2}
+    - target: {fileID: 2282748622937264471, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c163e8159e114cf9bb20260963e9fd2, type: 2}
+    - target: {fileID: 2282748622937264471, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e78f1ad2fae8349d290416d812aeee45, type: 2}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: length
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: diameter
+      value: 0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      propertyPath: pressureOut
+      value: 99.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 336942826231148674, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1899826466}
+    - targetCorrespondingSourceObject: {fileID: 336942826231148674, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1899826465}
+  m_SourcePrefab: {fileID: 100100000, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+--- !u!1 &1899826463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 336942826231148674, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+  m_PrefabInstance: {fileID: 1899826462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1899826464 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2282748622937264471, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
+  m_PrefabInstance: {fileID: 1899826462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1899826465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899826463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22f2e06ff71b491d895a877516019d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressureShaderDebugger
+  sourceFlow: {fileID: 1545357208}
+  targetRenderer: {fileID: 1899826464}
+  materialSlotIndex: 1
+  overrideMaterial: {fileID: 0}
+  pressureProperty: _PressureGradient
+  inMinProperty: _PG_InMin
+  inMaxProperty: _PG_InMax
+  normalizedProperty: _PressureValue
+  gradientMin: 0
+  gradientMax: 6000
+  debugLogs: 1
+  logInterval: 0.5
+  testT: 0
+--- !u!114 &1899826466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899826463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d6f908a867c4f2886b896cead4ee5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressureShaderController
+  sourceFlow: {fileID: 1545357208}
+  targetRenderer: {fileID: 1899826464}
+  overrideMaterial: {fileID: 2100000, guid: 29c811f0943204f4aae1e2a9a0c3658b, type: 2}
+  pressureProperty: _PressureGradient
+  inMinProperty: _PG_InMin
+  inMaxProperty: _PG_InMax
+  gradientMin: 0
+  gradientMax: 6000
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 996857137}
   - {fileID: 1136983318}
-  - {fileID: 633886637}
+  - {fileID: 1545357207}
+  - {fileID: 1899826462}
+  - {fileID: 116705123}
   - {fileID: 523953300}
   - {fileID: 1584104152}
   - {fileID: 719151436}

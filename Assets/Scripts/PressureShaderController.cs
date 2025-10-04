@@ -15,7 +15,7 @@ public class PressureShaderController : MonoBehaviour
 
     [Header("Rango esperado (Pa/m)")]
     public float gradientMin = 0f;
-    public float gradientMax = 4000f;
+    public float gradientMax = 6000f;
 
     Material _matInstance;
 
@@ -39,6 +39,10 @@ public class PressureShaderController : MonoBehaviour
             // Calcula gradiente de presión simple (Pa/m)
             float deltaP = (sourceFlow.pressureIn - sourceFlow.pressureOut) * 133.322f; // mmHg → Pa
             float grad = deltaP / Mathf.Max(0.0001f, sourceFlow.length);
+
+            // Ajuste dinámico del rango máximo para que el color sea interpretable
+            float dynamicMax = Mathf.Max(grad * 1.1f, gradientMax); // usa el mayor entre grad*1.1 y gradientMax
+            _matInstance.SetFloat(inMaxProperty, dynamicMax);
 
             // Actualiza shader
             _matInstance.SetFloat(pressureProperty, grad);

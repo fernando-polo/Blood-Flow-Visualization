@@ -203,8 +203,6 @@ public class BloodFlowController : MonoBehaviour
         _localMaterial.SetFloat(xMinProperty, xMin);
         _localMaterial.SetFloat(xMaxProperty, xMax);
 
-        // Debug (opcional)
-        //Debug.Log($"{name} → Bounds local X: min={xMin:F4}, max={xMax:F4}");
     }
 
     // Editor helper: recalcula bounds cuando cambias parámetros en el inspector (solo en Editor)

@@ -19,7 +19,7 @@ public class PressureShaderDebugger : MonoBehaviour
 
     [Header("Rango esperado (Pa/m)")]
     public float gradientMin = 0f;
-    public float gradientMax = 4000f;
+    public float gradientMax = 6000f;
 
     [Header("Debug")]
     public bool debugLogs = true;

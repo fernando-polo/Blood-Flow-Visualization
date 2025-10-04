@@ -536,7 +536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
       propertyPath: diameter
-      value: 0.014
+      value: 0.012
       objectReference: {fileID: 0}
     - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
       propertyPath: pressureIn
@@ -544,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5464006933744739620, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
       propertyPath: pressureOut
-      value: 99.5
+      value: 95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -893,7 +893,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 336942826231148674, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
       propertyPath: m_Name
-      value: Aorta _ Turbulence (Estenosis Leve) (1)
+      value: Aorta _ Turbulence (Estenosis Leve)
       objectReference: {fileID: 0}
     - target: {fileID: 1145848464445270584, guid: 86f80162e9ffe47b0bb13f61d1745789, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1312,7 +1312,7 @@ MonoBehaviour:
   inMinProperty: _PG_InMin
   inMaxProperty: _PG_InMax
   gradientMin: 0
-  gradientMax: 4000
+  gradientMax: 6000
 --- !u!114 &1406481850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1334,7 +1334,7 @@ MonoBehaviour:
   inMaxProperty: _PG_InMax
   normalizedProperty: _PressureValue
   gradientMin: 0
-  gradientMax: 500
+  gradientMax: 6000
   debugLogs: 1
   logInterval: 0.5
   testT: 0
@@ -1468,8 +1468,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495145361}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.36347184, y: 0.0052833566, z: -0.0020967887, w: 0.9315879}
-  m_LocalPosition: {x: -18.378395, y: 20.53614, z: -1.3070173}
+  m_LocalRotation: {x: -0.22890548, y: 0.01901114, z: -0.004514206, w: -0.9732526}
+  m_LocalPosition: {x: -16.017193, y: 11.810139, z: -3.705883}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

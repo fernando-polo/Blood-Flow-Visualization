@@ -8,9 +8,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3398546895747174766, guid: 19fa02d0a8e0a4255b156a17dc832a5d, type: 3}
+      propertyPath: diameter
+      value: 0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398546895747174766, guid: 19fa02d0a8e0a4255b156a17dc832a5d, type: 3}
+      propertyPath: pressureOut
+      value: 99.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6940911832252777672, guid: 19fa02d0a8e0a4255b156a17dc832a5d, type: 3}
       propertyPath: m_Name
-      value: Aorta_iliac-arteries (Original)
+      value: Aorta_iliac-arteries (Normal) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7717131429562015346, guid: 19fa02d0a8e0a4255b156a17dc832a5d, type: 3}
       propertyPath: m_LocalPosition.x
