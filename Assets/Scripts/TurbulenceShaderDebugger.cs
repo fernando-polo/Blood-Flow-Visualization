@@ -17,6 +17,30 @@ public class TurbulenceShaderDebugger : MonoBehaviour
     [Header("Opciones")]
     public bool debugLogs = true;
 
+        // ------------------- AÑADIR DESPUÉS DE LA DECLARACIÓN DE LA CLASE -------------------
+    public float pressureIn;
+    public float pressureOut;
+    public float length;
+    public float diameter;
+    public float viscosity;
+
+    public void UpdateTurbulenceValues()
+    {
+        // Sobrescribimos temporalmente los valores del flowController para recalcular
+        if(flowController != null)
+        {
+            flowController.pressureIn = pressureIn;
+            flowController.pressureOut = pressureOut;
+            flowController.length = length;
+            flowController.diameter = diameter;
+            flowController.viscosity = viscosity;
+
+            // Recalcular Reynolds
+            CalculateReynolds(flowController);
+        }
+    }
+
+
     void Awake()
     {
         if (targetRenderer == null)

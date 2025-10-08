@@ -109,32 +109,33 @@ public class BloodFlowController : MonoBehaviour
         _initialized = true;
     }
 
-    void Update()
-    {
-        if (!_initialized || _localMaterial == null) return;
+void Update()
+{
+    if (!_initialized || _localMaterial == null) 
+        return;
 
-        // 1) Calcular velocidad (FlowSpeed) usando Ley de Poiseuille
-        float velocity = CalculateAverageVelocity();
-        _localMaterial.SetFloat(flowSpeedProperty, velocity);
+    // 1) Calcular velocidad (FlowSpeed) usando Ley de Poiseuille
+    float velocity = CalculateAverageVelocity();
+    _localMaterial.SetFloat(flowSpeedProperty, velocity);
 
-        // 2) Enviar presiones y longitud al shader
-        _localMaterial.SetFloat(pressureInProperty, pressureIn);
-        _localMaterial.SetFloat(pressureOutProperty, pressureOut);
-        _localMaterial.SetFloat(lengthProperty, length);
-        _localMaterial.SetFloat(epsilonProperty, epsilon);
+    // 2) Enviar presiones y longitud al shader
+    _localMaterial.SetFloat(pressureInProperty, pressureIn);
+    _localMaterial.SetFloat(pressureOutProperty, pressureOut);
+    _localMaterial.SetFloat(lengthProperty, length);
+    _localMaterial.SetFloat(epsilonProperty, epsilon);
 
-        // 3) Enviar gradiente de presión al shader 👇
-        float gradient = (pressureIn - pressureOut) / Mathf.Max(length, 1e-6f);
-        if (_localMaterial.HasProperty(pressureGradientProperty))
-            _localMaterial.SetFloat(pressureGradientProperty, gradient);
+    // 3) Enviar gradiente de presión al shader
+    float gradient = (pressureIn - pressureOut) / Mathf.Max(length, 1e-6f);
+    if (_localMaterial.HasProperty(pressureGradientProperty))
+        _localMaterial.SetFloat(pressureGradientProperty, gradient);
 
-        Debug.Log($"{name} → ΔP={pressureIn - pressureOut} mmHg | Grad={gradient:F2} mmHg/m");
+    // Debug: imprimir ΔP y gradiente
+    Debug.Log($"{name} → ΔP={pressureIn - pressureOut} mmHg | Grad={gradient:F2} mmHg/m");
 
-        // 4) Actualizar bounds si requerido (Xmin/Xmax en local space)
-        if (updateBoundsEveryFrame)
-            UpdateBoundsToMaterial();
-
-    }
+    // 4) Actualizar bounds si requerido (Xmin/Xmax en local space)
+    if (updateBoundsEveryFrame)
+        UpdateBoundsToMaterial();
+}
 
     public float CurrentFlow { get; private set; }  // flujo en m³/s
 
@@ -155,7 +156,15 @@ public class BloodFlowController : MonoBehaviour
         float deltaP = deltaP_mmHg * 133.322f;
 
         // radio (m)
-        float radius = Mathf.Max(1e-6f, diameter / 2f); // evita 0
+        // float radius = Mathf.Max(1e-6f, diameter / 2f);
+        float radius = Mathf.Max(1e-6f, (diameter / 2f) * transform.lossyScale.x);
+        Debug.Log($"[Debug Flow] diameter/2={radius}, localScaleX={transform.localScale.x}, lossyScaleX={transform.lossyScale.x}");
+
+
+        // --- DEBUG ---
+        float globalScaleX = transform.lossyScale.x;
+        Debug.Log($"[Debug Flow] diameter/2={diameter/2f}, localScaleX={transform.localScale.x}, lossyScaleX={globalScaleX}");
+        // --- FIN DEBUG ---
 
         // resistencia R = (8 η L) / (π r^4)
         float r4 = Mathf.Pow(radius, 4);
@@ -183,7 +192,9 @@ public class BloodFlowController : MonoBehaviour
             velocity = 0f;
 
         return velocity;
+
     }
+
 
     /// <summary>
     /// Calcula Xmin/Xmax del renderer en espacio local del objeto y los asigna al material.
@@ -204,6 +215,14 @@ public class BloodFlowController : MonoBehaviour
         _localMaterial.SetFloat(xMaxProperty, xMax);
 
     }
+
+    void OnEnable()
+    {
+        if (!_initialized)
+            InitializeMaterials(); // Reinstancia los materiales si el objeto se activa
+    }
+
+
 
     // Editor helper: recalcula bounds cuando cambias parámetros en el inspector (solo en Editor)
 #if UNITY_EDITOR

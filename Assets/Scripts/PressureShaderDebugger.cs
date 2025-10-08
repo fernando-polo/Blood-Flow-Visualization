@@ -33,6 +33,25 @@ public class PressureShaderDebugger : MonoBehaviour
     [Header("Test Mode (ignora cálculos)")]
     [Range(0f, 1f)] public float testT = -1f;
 
+
+// ------------------- AÑADIR DESPUÉS DE LA DECLARACIÓN DE LA CLASE -------------------
+    public float pressureIn;
+    public float pressureOut;
+    public float length;
+
+    public void UpdatePressureValues()
+    {
+        if (sourceFlow != null)
+        {
+            sourceFlow.pressureIn = pressureIn;
+            sourceFlow.pressureOut = pressureOut;
+            sourceFlow.length = length;
+        }
+
+        // Recalcular gradiente y refrescar shader
+        RefreshShader();
+    }
+
     void OnEnable()
     {
         // Reconectar material cada vez que el objeto se activa

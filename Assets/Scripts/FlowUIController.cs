@@ -24,13 +24,28 @@ public class FlowUIController : MonoBehaviour
     // Interno
     float displayNormalized = 0f;
 
+    // void Start()
+    // {
+    //     if (bloodFlow == null)
+    //     {
+    //         bloodFlow = Object.FindFirstObjectByType<BloodFlowController>();
+    //         if (bloodFlow == null)
+    //             Debug.LogWarning("FlowUIController: no se encontró BloodFlowController en la escena.");
+    //     }
+    // }
     void Start()
     {
         if (bloodFlow == null)
         {
-            bloodFlow = Object.FindFirstObjectByType<BloodFlowController>();
+            // Busca el BloodFlowController en los hijos de este GameObject
+            bloodFlow = GetComponentInChildren<BloodFlowController>();
             if (bloodFlow == null)
-                Debug.LogWarning("FlowUIController: no se encontró BloodFlowController en la escena.");
+            {
+                // Fallback: busca cualquier BloodFlowController en la escena
+                bloodFlow = Object.FindFirstObjectByType<BloodFlowController>();
+                if (bloodFlow == null)
+                    Debug.LogWarning("FlowUIController: no se encontró BloodFlowController en la escena.");
+            }
         }
     }
 
@@ -42,7 +57,9 @@ public class FlowUIController : MonoBehaviour
         float q_m3s = bloodFlow.CurrentFlow;
 
         // 2) Normalizar flujo a la barra
-        float targetNormalized = Mathf.Clamp01(q_m3s / Mathf.Max(1e-12f, maxFlow_m3s));
+        // Cambio mínimo: usar el flujo actual como máximo si es mayor que maxFlow_m3s
+        float autoMax = Mathf.Max(maxFlow_m3s, q_m3s);
+        float targetNormalized = Mathf.Clamp01(q_m3s / Mathf.Max(1e-12f, autoMax));
 
         // 3) Suavizado
         displayNormalized = Mathf.Lerp(displayNormalized, targetNormalized, Time.deltaTime * smoothSpeed);
@@ -56,12 +73,10 @@ public class FlowUIController : MonoBehaviour
             // Interpolación: bajo → normal → alto
             if (displayNormalized < 0.5f)
             {
-                // De azul a verde
                 fillImage.color = Color.Lerp(lowFlowColor, midFlowColor, displayNormalized * 2f);
             }
             else
             {
-                // De verde a rojo
                 fillImage.color = Color.Lerp(midFlowColor, highFlowColor, (displayNormalized - 0.5f) * 2f);
             }
         }
@@ -74,5 +89,8 @@ public class FlowUIController : MonoBehaviour
             float q_L_per_min = q_m3s * 1000f * 60f; // m³/s → L/min
             valueText.text = $"{q_L_per_min:F2} L/min";
         }
+
+        Debug.Log($"[UI] Leyendo CurrentFlow de: {bloodFlow.name} = {bloodFlow.CurrentFlow}");
+
     }
 }
