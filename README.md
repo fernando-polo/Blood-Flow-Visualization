@@ -10,11 +10,11 @@ It simulates hemodynamic parameters such as blood flow rate, pressure gradient, 
 The project was carried out at the Interventional Imaging Laboratory (LIVE) of ÉTS, in collaboration with the CHU Sainte-Justine University Hospital, as part of a broader initiative to integrate immersive technologies into medical education and vascular research.
 
 ## 📦 Tech Stack
-**3D-Engine:** Unity (URP, Shader Graph, C#)
-**3D-Modeling & Optimization:** Blender
-**Medica-Data&Simulation:** SimVascular, ParaView
-**XR-Platform:** Apple Vision Pro (VisionOS)
-**Build&Export:** Xcode, PolySpatialKit
+**3D Engine:** Unity (URP, Shader Graph, C#)
+**3DModeling & Optimization:** Blender
+**Medica Data & Simulation:** SimVascular, ParaView
+**XR Platform:** Apple Vision Pro (VisionOS)
+**Build & Export:** Xcode, PolySpatialKit
 **Tools:** Git, Visual Studio
 
 
