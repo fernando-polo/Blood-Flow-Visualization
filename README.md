@@ -56,3 +56,7 @@ It demonstrates how biomedical engineering, computational simulation, and immers
 - Balancing scientific fidelity with real-time performance constraints in immersive environments
 - Interdisciplinary collaboration between computer science, biomedical engineering, and medicine
 - Working in an applied research laboratory context with real academic and clinical stakeholders
+
+
+## 🎞️ Preview
+<img width="789" height="492" alt="Image" src="https://github.com/user-attachments/assets/97519c8c-c6ef-4a42-89fb-20293cbfe659" />
